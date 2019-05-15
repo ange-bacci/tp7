@@ -1,72 +1,85 @@
-/**
- *
- * @file    TestFunctorAbstrait.cpp
- *
- * @authors M. Laporte, D. Mathieu
- *
- * @date    27/04/2010
- *
- * @version V1.0
- *
- * @brief   functor abstrait
- *
- **/
-#include <iostream>
-#include <string>
-#include <cctype>               // ispunct(), islower(), isalpha()
-                                // tolower(), toupper()
-#include <cassert>
+///**
+// *
+// * @file    TestFunctorAbstrait.cpp
+// *
+// * @authors M. Laporte, D. Mathieu
+// *
+// * @date    27/04/2010
+// *
+// * @version V1.0
+// *
+// * @brief   functor abstrait
+// *
+// **/
+//#include <iostream>
+//#include <string>
+//#include <cctype>               // ispunct(), islower(), isalpha()
+//                                // tolower(), toupper()
+//#include <cassert>
  
-using namespace std;
+//using namespace std;
  
-namespace 
-{
-    class ToLower
-    {
-      public :
-        virtual ~ToLower (void) {}
-        virtual int operator () (int caract) const
-        {
-            return tolower (caract);
+//namespace
+//{
+//    class ITraitCar {
+//    public:
+//        virtual ~ITraitCar(){}
+//        virtual int operator()(int) const = 0;
+//    };
+
+//    class ToLower : public ITraitCar {
+//      public:
+//        virtual int operator () (int caract) const {
+//            return tolower (caract);
+//        }
+//    };
+
+//    class ToUpper : public ITraitCar {
+//      public:
+//        virtual int operator () (int caract) const {
+//            return toupper (caract);
+//        }
+//    };
+
+//    class ToIgnPunct : public ITraitCar {
+//      public:
+//        virtual int operator () (int caract) const {
+//            return ispunct(caract) ? ' ' : caract;
+//        }
+//    };
  
-        } // operateur()
+//    string & moulinette (string & str, const ITraitCar & transf)
+//    {
+//        for (string::size_type i (str.size ()); i--; )
+//            str [i] = transf (str [i]);
  
-    }; // CToLower
+//        return str;
  
-    string & moulinette (string & str, const ToLower & transf)
-    {
-        for (string::size_type i (str.size ()); i--; )
-            str [i] = transf (str [i]);
+//    } // moulinette()
  
-        return str;
+//    void testFunctor (void)
+//    {
+//        cout << "Functor abstrait : ";
  
-    } // moulinette()
+//        string ligne     ("azert:;,.?GFDSQ");
+//        string minusc    ("azert:;,.?gfdsq");
+//        string majusc    ("AZERT:;,.?GFDSQ");
+//        string sansPunct ("AZERT     GFDSQ");
+
+//        assert (minusc    == moulinette (ligne, ToLower()));
+//        assert (majusc    == moulinette (ligne, ToUpper()));
+//        assert (sansPunct == moulinette (ligne, ToIgnPunct()));
  
-    void testFunctor (void)
-    {
-        cout << "Functor abstrait : ";
+//        cout << "OK\n";
  
-        string ligne     ("azert:;,.?GFDSQ");
-        string minusc    ("azert:;,.?gfdsq");
-        string majusc    ("AZERT:;,.?GFDSQ");
-        string sansPunct ("AZERT     GFDSQ");
+//    } // testFunctor ()
  
-        // ToDo
+//} // namespace anonyme
  
-        assert (minusc    == moulinette (ligne, ...));
-        assert (majusc    == moulinette (ligne, ...));
-        assert (sansPunct == moulinette (ligne, ...));
+//int main (void)
+//{
+//    /*      */    testFunctor ();     /*           */
  
-        cout << "OK\n";
+//    return 0;
  
-    } // testFunctor ()
- 
-} // namespace anonyme
- 
-int main (void)
-{
-    /*      */    testFunctor ();     /*           */
- 
-    return 0;
- 
-} // main()
+//} // main()

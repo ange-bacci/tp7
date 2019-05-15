@@ -1,55 +1,55 @@
-/**
- *
- * @file     TestTypesBase.cpp
- *
- * @authors  M. Laporte
- *
- * @date     07/05/2018
- *
- * @version  V2.0
- *
- **/
-#include <iostream>
-#include <cassert>
+///**
+// *
+// * @file     TestTypesBase.cpp
+// *
+// * @authors  M. Laporte
+// *
+// * @date     07/05/2018
+// *
+// * @version  V2.0
+// *
+// **/
+//#include <iostream>
+//#include <cassert>
  
-#include "TypesBase.hpp"        // Character
+//#include "TypesBase.hpp"        // Character
  
-using namespace std;
-#define classdef typedef
+//using namespace std;
+//#define classdef typedef
  
-namespace 
-{
-    void testTypesBase (void)
-    {
-        cout << "TestTypesBase : ";
+//namespace
+//{
+//    void testTypesBase (void)
+//    {
+//        cout << "TestTypesBase : ";
  
-        // Verification de l'arithmetique des entiers avec la classe
-        //   Short
+//        // Verification de l'arithmetique des entiers avec la classe
+//        //   Short
  
-        Short s1 (12), s2 (34);
-        assert (s1 == 12);
-        assert (s2 == 34);
-        assert ((s1 + s2) == 46);
-        assert (s1++ == 12);
-        assert (++s1 == 14);
+//        Short s1 (12), s2 (34);
+//        assert (s1 == 12);
+//        assert (s2 == 34);
+//        assert ((s1 + s2) == 46);
+//        assert (s1++ == 12);
+//        assert (++s1 == 14);
+
+//        cout << "OK\n";
  
-        cout << "OK\n";
- 
-        // Verification du fonctionnement de l'injecteur
+//        // Verification du fonctionnement de l'injecteur
         
-        cout << "Saisir un Short : ";
-        cin >> s1;
+//        cout << "Saisir un Short : ";
+//        cin >> s1;
+
+//        cout << "s1 = " << s1 << endl;
         
-        cout << "s1 = " << s1 << endl;
-        
-    }// testTypesBase ()
+//    }// testTypesBase ()
  
-} // namespace
+//} // namespace
  
-int main ()
-{
-    testTypesBase();    // Attention : exception bad_alloc possible ...
+//int main ()
+//{
+//    testTypesBase();    // Attention : exception bad_alloc possible ...
  
-    return 0;
+//    return 0;
  
-} // main()
+//} // main()

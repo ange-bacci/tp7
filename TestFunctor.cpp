@@ -1,61 +1,63 @@
-/**
- *
- * @file   TestFunctor.cpp
- *
- * @authors M. Laporte, D. Mathieu
- *
- * @date    27/04/2010
- *
- * @version V1.0
- *
- * @brief   Premier functor 
- *
- **/
-#include <iostream>
-#include <string>
-#include <cctype>               // tolower(), toupper()
-#include <cassert>
+///**
+// *
+// * @file   TestFunctor.cpp
+// *
+// * @authors M. Laporte, D. Mathieu
+// *
+// * @date    27/04/2010
+// *
+// * @version V1.0
+// *
+// * @brief   Premier functor
+// *
+// **/
+//#include <iostream>
+//#include <string>
+//#include <cctype>               // tolower(), toupper()
+//#include <cassert>
  
-using namespace std;
+//using namespace std;
  
-namespace 
-{
-    class ToLower
-    {
-        // ToDo
+//namespace
+//{
+//    class ToLower
+//    {
+//    public:
+//        virtual ~ToLower() {}
+
+//        virtual int operator()(int i) {
+//            return tolower(i);
+//        }
  
-    }; // ToLower
+//    }; // ToLower
  
-    typedef int (* fctInt2Int_t) (int);
-    string & moulinette (string & str, fctInt2Int_t transf)
-    {
-        for (string::size_type i (str.size ()); i--; )
-            str [i] = transf (str [i]);
+//    string & moulinette (string & str, ToLower transf)
+//    {
+//        for (string::size_type i (str.size ()); i--; )
+//            str [i] = transf (str [i]);
  
-        return str;
+//        return str;
  
-    } // moulinette()
+//    } // moulinette()
  
-    void testFunctor (void)
-    {
-        cout << "Functor : ";
+//    void testFunctor (void)
+//    {
+//        cout << "Functor : ";
  
-        string ligne  ("AZECv qrgWSg wrV  wfdgWFDHG  wdfGWXCV");
-        string minusc ("azecv qrgwsg wrv  wfdgwfdhg  wdfgwxcv");
+//        string ligne  ("AZECv qrgWSg wrV  wfdgWFDHG  wdfGWXCV");
+//        string minusc ("azecv qrgwsg wrv  wfdgwfdhg  wdfgwxcv");
+//        assert (minusc == moulinette (ligne, ToLower()));
  
-        // ToDo 
-        assert (minusc == moulinette (ligne, ...));
+//        cout << "OK\n";
  
-        cout << "OK\n";
+//    } // testFunctor()
  
-    } // testFunctor()
+//} // namespace anonyme
  
-} // namespace anonyme
+//int main (void)
+//{
+//    /*      */    testFunctor ();     /*           */
  
-int main (void)
-{
-    /*      */    testFunctor ();     /*           */
+//    return 0;
  
-    return 0;
- 
-} // main()
+//} // main()
